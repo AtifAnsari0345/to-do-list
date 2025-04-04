@@ -1,0 +1,307 @@
+/* General Layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+/* Cards & Shadows */
+.card {
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.card-header {
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+.shadow-hover:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Form Styling */
+.form-control, .form-select {
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+.input-group-text {
+    border-radius: 8px 0 0 8px;
+    background-color: #f8f9fa;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+/* Category Colors */
+.text-work {
+    color: #007bff;
+}
+
+.text-personal {
+    color: #28a745;
+}
+
+.text-shopping {
+    color: #ffc107;
+}
+
+.text-health {
+    color: #dc3545;
+}
+
+.text-finance {
+    color: #17a2b8;
+}
+
+/* Empty State */
+.empty-state {
+    padding: 40px 0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .stat-card {
+        margin-bottom: 15px;
+    }
+    
+    .chart-container {
+        height: 250px;
+    }
+}
+
+/* Dark Theme */
+.dark-theme {
+    background-color: #212529;
+    color: #e9ecef;
+}
+
+.dark-theme .card {
+    background-color: #343a40;
+    color: #e9ecef;
+}
+
+.dark-theme .card-header {
+    background-color: #495057 !important;
+    color: #ffffff !important;
+}
+
+.dark-theme .task-stats {
+    background-color: #343a40;
+}
+
+.dark-theme .stat-card {
+    background-color: #495057 !important;
+    color: #e9ecef;
+}
+
+.dark-theme .form-control,
+.dark-theme .form-select {
+    background-color: #495057;
+    border-color: #6c757d;
+    color: #e9ecef;
+}
+
+.dark-theme .modal-content {
+    background-color: #343a40;
+    color: #e9ecef;
+}
+
+.dark-theme .form-check-input {
+    background-color: #495057;
+    border-color: #6c757d;
+}
+
+.dark-theme .footer {
+    background-color: #343a40 !important;
+}
+
+.dark-theme .footer .text-muted {
+    color: #adb5bd !important;
+}
+
+.dark-theme .table {
+    color: #e9ecef;
+}
+
+.dark-theme .table-hover tbody tr:hover {
+    background-color: #495057;
+    color: #ffffff;
+}
+
+.dark-theme .dropdown-menu {
+    background-color: #343a40;
+    border-color: #495057;
+}
+
+.dark-theme .dropdown-item {
+    color: #e9ecef;
+}
+
+.dark-theme .dropdown-item:hover {
+    background-color: #495057;
+    color: #ffffff;
+}
+
+/* Task Status Styling */
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-in-progress {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.status-completed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.dark-theme .status-pending {
+    background-color: #856404;
+    color: #fff3cd;
+}
+
+.dark-theme .status-in-progress {
+    background-color: #004085;
+    color: #cce5ff;
+}
+
+.dark-theme .status-completed {
+    background-color: #155724;
+    color: #d4edda;
+}
+
+/* Priority Indicators */
+.priority-high {
+    border-left: 4px solid #dc3545;
+}
+
+.priority-medium {
+    border-left: 4px solid #ffc107;
+}
+
+.priority-low {
+    border-left: 4px solid #28a745;
+}
+
+/* Charts & Stats */
+.chart-container {
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.dark-theme .stat-label {
+    color: #adb5bd;
+}
+
+/* Notifications */
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    background-color: #dc3545;
+    color: white;
+    font-size: 12px;
+}
+
+/* Task Item */
+.task-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.dark-theme .task-item {
+    background-color: #495057;
+}
+
+.task-item:hover {
+    background-color: #f8f9fa;
+    transform: translateX(5px);
+}
+
+.dark-theme .task-item:hover {
+    background-color: #343a40;
+}
+
+.task-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.task-date {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.dark-theme .task-date {
+    color: #adb5bd;
+}
+
+/* Custom Checkboxes */
+.custom-checkbox .form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-top: 0.25em;
+}
+
+.custom-checkbox .form-check-input:checked {
+    background-color: #28a745;
+    border-color: #28a745;
+}
